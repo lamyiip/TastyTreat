@@ -1,0 +1,34 @@
+</body>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+    
+        var name= document.getElementById('name').value;
+        var email= document.getElementById('email').value;
+        var message= document.getElementById('message').value;
+        var checkBox = document.getElementById("myCheck");
+
+        if (checkBox.checked == true){
+            checkBox.value="1";
+        } else {
+            checkBox.value="0";
+        }
+
+        /* Email Validation */
+        emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+        function validateForm(){
+            if (email == ""){
+                alert ("Email is missing");
+                return false;
+
+            }else if (!emailPattern.test(email)){
+                alert ("Pattern of email should be 'mandy123@mail.com'.");
+                return false;
+            }
+        }
+        
+    });
+</script>
+</html>
