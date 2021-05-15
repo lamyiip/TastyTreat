@@ -43,7 +43,7 @@ Tasty.findAll = (result) => {
         return;
       }
 
-      result(null, { email });
+      result(null, { res });
     
     });
 };
