@@ -20,7 +20,8 @@ router.post('/submit',function(req,res){
         message
       });
     }else{
-      if(data.email){
+      console.log(data.res.length)
+      if(data.res.length > 0){
         res.render("index", {
           error: true,
         });
